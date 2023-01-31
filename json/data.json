@@ -119,7 +119,7 @@
                 },
             {                  
                     "Pregunta": "5. ¿Cuál es la diferencia entre listas y tuplas?",
-                    "Respuesta": {"texto":"La principal diferencia entre las listas y las tuplas es la mutabilidad. Las listas son mutables, por lo que podemos manipularlas añadiendo o eliminando elementos. mylist = [1,2,3] mylist.append(4) mylist.remove(1) print(mylist) [2,3,4]. En cambio, las tuplas son inmutables. Aunque podemos acceder a cada elemento de una tupla, no podemos modificar su contenido. mytuple = (1,2,3) mytuple.append(4) AttributeError: 'tuple' object has no attribute 'append'. Un punto importante a mencionar aquí es que aunque las tuplas son inmutables, pueden contener elementos mutables como listas o conjuntos.","codigo":"mytuple = (1,2,['a','b','c'])mytuple[2]['a','b','c']mytuple[2][0]=['A']print(mytuple)(1,2,[['A'],'b','c'])"},
+                    "Respuesta": "",
                     "Ejemplo": "",
                     "Type":"json"
                 },
