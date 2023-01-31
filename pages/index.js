@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Link from 'next/link';
 /*import { Inter } from '@next/font/google'*/
 /*import styles from '@/styles/Home.module.css'*/
@@ -30,7 +28,7 @@ export default function Home() {
         />
         
       </Head>
-     <Header />
+ 
 
       <section className="hero-banner home-hero">
         <div className="hero-banner-img">
@@ -191,7 +189,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
+    
     </>
   )
 }
