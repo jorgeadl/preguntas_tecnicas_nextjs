@@ -1,38 +1,34 @@
-:root {
-  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
 }
-* {
+
+*, ::after, ::before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
 @font-face {
   font-family: Uni Neue Heavy Italic;
-  src: url('/fonts/UniNeueHeavy-Italic.otf');
-}  
-@font-face {
-  font-family: Uni Neue;
-  src:url('/fonts/UniNeueRegular.otf');
-}
-@font-face {
-  font-family: Uni Neue Book;
-  src:url('/fonts/UniNeueBook.otf');
-} 
-@font-face {
-  font-family: Uni Neue Bold;
-  src:url('/fonts/UniNeueBold.otf');
-} 
-@font-face {
-  font-family: Slabo;
-  src:url('/fonts/Slabo27px-Regular.ttf')
+  src: url(/assets/fonts/UniNeueHeavy-Italic.otf);
 }
 
-/* Body */
-html,
+@font-face {
+  font-family: Uni Neue;
+  src:url(/assets/fonts/UniNeueRegular.otf);
+}
+
+@font-face {
+  font-family: Slabo;
+  src:url(/assets/fonts/Slabo27px-Regular.ttf)
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
   font-family: Uni Neue Heavy Italic;
   font-size: 1.1rem;
   font-weight: 400;
@@ -40,23 +36,26 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  
 }
-
-body a{
+body a {
   color: #729e2e;
 }
-
 /* Header */
 
 .encabezado {
   background: #38353f;
   position: relative;
   z-index: 10;
-  height: 103px;
 }
-
 .encabezado .navbar .navbar-toggler {
   margin-right: 20px;
+}
+.encabezado .navbar .navbar-collapse .navbar-nav {
+  background: #e6e5e5;
+}
+.nav-item a {
+  color: #e9501d;
 }
 .encabezado .navbar .navbar-nav {
   display: flex;
@@ -65,24 +64,16 @@ body a{
   width: 100%;
   background: #38353f;
 }
-.encabezado .navbar .navbar-collapse .navbar-nav {
-  background: #e6e5e5;
-}
-
 .encabezado .navbar .navbar-collapse .navbar-nav .nav-item a {
   font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
   color: #38353f;
   font-size: 18px;
   padding: 5px ;
 }
-
 .encabezado .navbar .navbar-collapse .navbar-nav .dropdown-divider {
   border-top: 1px solid #4d4d4d;
-  height: 0;
-  margin: 0.5rem 0;
-  overflow: hidden;
 }
-.encabezado .navbar .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item {
+.encabezado .navbar .navbar-collapse .navbar-nav .dropdown-menu.show .nav-link {
   color: #38353f;
   padding: 10px 10px;
 }
@@ -112,14 +103,7 @@ body a{
   padding: 0 10px;
   text-decoration: none;
 }
-/* Fin Header */
 
-
-
-h6 {
-  font-family: Uni Neue Bold, Helvetica, Arial, sans-serif;
-  line-height: 2 !important;   
-}
 
 a {
   text-decoration: none;
@@ -129,6 +113,7 @@ p {
 }
 
 
+/* Body */
 .hero-banner-img {
   height: 500px;
   margin: 0;
@@ -172,7 +157,7 @@ p {
   margin-top: 0;
 }
 .cursos-home {
-  background: url('/img/home/fondo-cursos-disponibles-2.jpg');
+  background: url(/assets/home/fondo-cursos-disponibles-2f6f18bc2f9df767ae8f4919b95f313bf2eb6648a438c1b124b1043824465467.jpg);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -244,7 +229,7 @@ p {
 /* Seccion cursos home */
 
 .cursos-home {
-  background: url('/img/home/fondo-cursos-disponibles.jpg');
+  background: url(/assets/img/home/fondo-cursos-disponibles.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -256,7 +241,7 @@ p {
   text-align: center;
 }
 .cursos-home h2.t-uni-italic code {
-  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  font-family: "UniNeueHeavy-Italic", Helvetica, Arial, sans-serif;
   color: #fff;
 }
 .cursos-home .cursos-home-content {
@@ -279,7 +264,7 @@ p {
 }
 .cursos-home .cursos-home-content a {
   color: #fff;
-  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  font-family: "UniNeueHeavy-Italic", Helvetica, Arial, sans-serif;
   font-size: 30px;
 }
 /* Hero-menu */
@@ -302,7 +287,6 @@ p {
   text-decoration: none;
 }
 
-
 /*Footer*/
 
 footer {
@@ -311,14 +295,14 @@ footer {
 
 footer .footer-logo {
   background: #fff;
-  height: 50px;
+  height: 55px;
   text-align: center;
 }
 
-footer .footer-logo img{
+footer .footer-logo img {
   background: white;
-  padding: 15px;
- 
+  padding: 20px;
+  max-width: 80%;
 }
 
 footer .footer-content {
@@ -385,7 +369,12 @@ footer .dropdown-divider {
   border: solid 1px #009ee3;
   margin: 15px 0;
 }
-
+.dropdown-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
 footer .footer-content .footer-redes {
   margin-top: 20px;
 }
@@ -446,7 +435,7 @@ footer .footer-content .footer-redes ul li a i:hover {
 @media only screen and (min-width: 992px){
 .encabezado .navbar .navbar-collapse .navbar-nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   align-items: center;
   padding-left: 20px;
   background: #38353f;
@@ -465,7 +454,7 @@ footer .footer-content .footer-redes ul li a i:hover {
 }
 @media only screen and (min-width: 768px){
 .unete-cursos .unete-cursos-content:before {
-  content: url('/img/home/llave-left.png');
+  content: url(/assets/img/home/llave-left.png);
   height: 122px;
   left: -50px;
   position: absolute;
@@ -481,7 +470,7 @@ footer .footer-content .footer-redes ul li a i:hover {
 }
 @media only screen and (min-width: 768px){
 .unete-cursos .unete-cursos-content:after {
-  content: url('/img/home/llave-right.png');
+  content: url(/assets/img/home/llave-right.png);
   height: 122px;
   position: absolute;
   right: -50px;
@@ -502,6 +491,66 @@ footer .footer-content .footer-redes ul li a i:hover {
 }
 }
 
+/* ESTILOS SECCION UNETE CURSOS HOME - PAGINA HOME*/
+.unete-cursos {
+padding: 40px 0;
+}
+.unete-cursos .unete-cursos-content {
+margin: 0 auto;
+max-width: 600px;
+padding: 30px 0;
+position: relative;
+}
+.unete-cursos .unete-cursos-left .p-uni-italic {
+font-size: 24px;
+text-decoration: none;
+}
+.unete-cursos .unete-cursos-left p {
+color: #fff;
+font-size: 24px;
+margin: 0;
+text-align: center;
+text-decoration: underline;
+min-height: 40px;
+}
+.unete-cursos .unete-cursos-right {
+margin-top: 30px;
+text-align: center;
+}
+.unete-cursos .unete-cursos-right a {
+font-family: "UniNeueHeavy-Italic", Helvetica, Arial, sans-serif;
+font-size: 24px;
+margin: 0;
+padding: 15px 20px;
+text-align: center;
+}
 
+@media only screen and (min-width: 768px) {
+.unete-cursos .unete-cursos-content:before {
+  content: url("/assets/img/home/llave-left.png");
+  height: 122px;
+  left: -50px;
+  position: absolute;
+  top: 0;
+  width: 46px;
+}
+.unete-cursos .unete-cursos-content:after {
+  content: url("/assets/img/home/llave-right.png");
+  height: 122px;
+  position: absolute;
+  right: -50px;
+  top: 0;
+  width: 46px;
+}
+.unete-cursos .unete-cursos-content .unete-cursos-left p {
+  text-align: left;
+}
+.unete-cursos .unete-cursos-content .unete-cursos-right {
+  margin-top: 10px;
+}
+.unete-cursos .unete-cursos-content .unete-cursos-right a code {
+  font-family: "UniNeueHeavy-Italic", Helvetica, Arial, sans-serif;
+}
+}
 
 
