@@ -1,30 +1,26 @@
-// pages/index.js
-
-
 export default function About(props) {
   const data = props.datajson
-  const questions = props.questions;
-  const bootcamp = props.bootcamp;
+ 
   
   return (
     <div style={{ padding: 30 }}>
       <div>
-        <h1>{bootcamp}</h1>  
+
         {data.map(questions =>
           <div
             key={questions.id}
             style={{ padding: 20, borderBottom: '1px solid #ccc' }}>
-            
-            <h2>
+            <h5>
             {questions.bootcamp}
-            </h2>
-            <h2>
+            </h5>
+            <h5>
             {questions.questions[0].Pregunta}
-            </h2>
-            
+            </h5> 
+            <h5>
+            {questions.questions[1].Pregunta}
+            </h5>           
           </div>)
-        }
-          
+        }   
       </div>
     </div>
     
