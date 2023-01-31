@@ -1,6 +1,6 @@
 //import  "bootstrap/dist/css/bootstrap.css";
-import '@ericadl/styles/globals.css'
-import Layout from '@ericadl/components/Layout'
+import '/styles/globals.css'
+import Layout from '/components/Layout'
 
 
 
