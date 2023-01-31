@@ -1,24 +1,44 @@
-import fsPromises from 'fs/promises';
-import path from 'path'
+import fsPromises from "fs/promises";
+import path from "path";
 
-export default function Faq({data}) {
+export default function Faq(props) {
+  const posts = props.data;
   return (
     <>
-      {data.map(({ bootcamp, questions }) => (
+      {posts.map(({ bootcamp, questions }) => (
         <>
-        <div>
-          <h3>{bootcamp}</h3>
-
           <div>
-            {questions.map(({ Pregunta, Respuesta, Ejemplo }) => (
-              <div>
-                <h5>{Pregunta}</h5>
-                <p>{Respuesta}</p>
-                <p>{Ejemplo}</p>
-              </div>
-            ))}
+            <h3>{bootcamp}</h3>
+
+            <div>
+              {questions.map(({ Pregunta, Respuesta, type }) => (
+                <div>
+                  <h5>{Pregunta}</h5>
+                  
+                  <div>{ type == 'Array' ?  Respuesta.map(element => <p>{element}</p>)  : Respuesta }</div>
+
+                </div>
+
+                // <div>
+                // <h5 className='text-primary'>{Pregunta}</h5>
+
+                //   Respuesta != String ? (
+                //     <>
+                //       <p>{Respuesta}</p>
+                //     </>
+                //   ) : (
+                // <div>
+                // <p className='text-secondary'>{Respuesta.texto}</p>
+                // <p>{Respuesta.codigo }</p>
+                // </div>
+                //   )
+
+                //   <p>{Ejemplo}</p>
+
+                //     </div>
+              ))}
+            </div>
           </div>
-        </div>
         </>
       ))}
     </>
@@ -26,10 +46,10 @@ export default function Faq({data}) {
 }
 
 export async function getStaticPaths() {
-  const filePath = path.join(process.cwd(), 'json/data.json');
+  const filePath = path.join(process.cwd(), "json/data.json");
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
-  const objectDataArray= objectData.data
+  const objectDataArray = objectData.data;
   const paths = objectDataArray.map((element) => ({
     params: { id: element.bootcamp },
   }));
@@ -40,20 +60,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), 'json/data.json');
+  const filePath = path.join(process.cwd(), "json/data.json");
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
-  const objectDataArray= objectData.data
-  const data = objectDataArray.filter((element) => element.bootcamp == params.id);
+  const objectDataArray = objectData.data;
+  const data = objectDataArray.filter(
+    (element) => element.bootcamp == params.id
+  );
   return {
     props: {
       data,
     },
   };
 }
-
-
-
 
 // Fetching data from the JSON file
 // import fsPromises from 'fs/promises';
@@ -75,7 +94,7 @@ export async function getStaticProps({ params }) {
 //             <><h2 className='text-primary'>{question.Pregunta}</h2>
 //             <h2>{question.Respuesta}</h2></>
 //               )}
-              
+
 //               </div>
 
 //           </div>)}
