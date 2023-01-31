@@ -1,6 +1,7 @@
-import { carreras } from "../../posts/carreras";
+import fsPromises from 'fs/promises';
+import path from 'path'
 
-export default function Faq({ data }) {
+export default function Faq({data}) {
   return (
     <>
       {data.map(({ bootcamp, questions }) => (
@@ -24,8 +25,12 @@ export default function Faq({ data }) {
   );
 }
 
-export function getStaticPaths() {
-  const paths = carreras.map((element) => ({
+export async function getStaticPaths() {
+  const filePath = path.join(process.cwd(), 'json/data.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+  const objectDataArray= objectData.data
+  const paths = objectDataArray.map((element) => ({
     params: { id: element.bootcamp },
   }));
   return {
@@ -34,8 +39,12 @@ export function getStaticPaths() {
   };
 }
 
-export function getStaticProps({ params }) {
-  const data = carreras.filter((element) => element.bootcamp == params.id);
+export async function getStaticProps({ params }) {
+  const filePath = path.join(process.cwd(), 'json/data.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+  const objectDataArray= objectData.data
+  const data = objectDataArray.filter((element) => element.bootcamp == params.id);
   return {
     props: {
       data,

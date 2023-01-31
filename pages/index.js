@@ -1,9 +1,11 @@
 import Head from "next/head";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
-import { carreras } from "../posts/carreras";
+import fsPromises from 'fs/promises';
+import path from 'path'
 
-export default function Home({ dataCarreras }) {
+export default function Home(props) {
+  const posts = props.data
   return (
     <>
       <section className={utilStyles.headingMd}>
@@ -11,7 +13,7 @@ export default function Home({ dataCarreras }) {
         <div>
           Estas son las preguntas más comúnes si estas aplicando para una
           vacante de:
-          {dataCarreras.map(({bootcamp}) => (
+          {posts.map(({bootcamp}) => (
             <div>
               <ul>
                 <li>
@@ -28,11 +30,12 @@ export default function Home({ dataCarreras }) {
   );
 }
 
-export function getStaticProps() {
-  const dataCarreras = carreras.map((dataCarreras) => dataCarreras);
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'json/data.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+
   return {
-    props: {
-      dataCarreras,
-    },
-  };
+    props: objectData
+  }
 }
