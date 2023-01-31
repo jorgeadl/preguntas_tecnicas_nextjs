@@ -1,107 +1,507 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+@font-face {
+  font-family: Uni Neue Heavy Italic;
+  src: url('/fonts/UniNeueHeavy-Italic.otf');
+}  
+@font-face {
+  font-family: Uni Neue;
+  src:url('/fonts/UniNeueRegular.otf');
+}
+@font-face {
+  font-family: Uni Neue Book;
+  src:url('/fonts/UniNeueBook.otf');
+} 
+@font-face {
+  font-family: Uni Neue Bold;
+  src:url('/fonts/UniNeueBold.otf');
+} 
+@font-face {
+  font-family: Slabo;
+  src:url('/fonts/Slabo27px-Regular.ttf')
+}
+
+/* Body */
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: Uni Neue Heavy Italic;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body a{
+  color: #729e2e;
+}
+
+/* Header */
+
+.encabezado {
+  background: #38353f;
+  position: relative;
+  z-index: 10;
+  height: 103px;
+}
+
+.encabezado .navbar .navbar-toggler {
+  margin-right: 20px;
+}
+.encabezado .navbar .navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  background: #38353f;
+}
+.encabezado .navbar .navbar-collapse .navbar-nav {
+  background: #e6e5e5;
+}
+
+.encabezado .navbar .navbar-collapse .navbar-nav .nav-item a {
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  color: #38353f;
+  font-size: 18px;
+  padding: 5px ;
+}
+
+.encabezado .navbar .navbar-collapse .navbar-nav .dropdown-divider {
+  border-top: 1px solid #4d4d4d;
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+.encabezado .navbar .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item {
+  color: #38353f;
+  padding: 10px 10px;
+}
+.dropdown-menu {
+  width: 300px !important;
+  
+}
+
+.top-redes {
+  float: left;
+}
+.top-redes ul li {
+  list-style-type: none;
+}
+.top-redes ul {
+  display: flex;
+  flex-wrap: wrap;
+  height: 55px;
+  justify-content: space-between;
+  line-height: 55px;
+  margin: 0;
+  padding: 0;
+}
+.top-redes ul li a {
+  color: #1d1d1b;
+  font-size: 24px;
+  padding: 0 10px;
+  text-decoration: none;
+}
+/* Fin Header */
+
+
+
+h6 {
+  font-family: Uni Neue Bold, Helvetica, Arial, sans-serif;
+  line-height: 2 !important;   
 }
 
 a {
-  color: inherit;
+  text-decoration: none;
+}
+p {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+
+.hero-banner-img {
+  height: 500px;
+  margin: 0;
+  position: relative;
+}
+.hero-banner-img img {
+  height: 500px;
+  object-fit: cover;
+  width: 100%;
+}
+.hero-banner-img .hero-banner-caption{
+  color: #fff;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: absolute;
+  top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+.t-uni-heavy-italic {
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+}
+.hero-banner-img .hero-banner-caption h1.t-uni-heavy-italic {
+  font-size: 24px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 3px black;
+}
+.hero-banner-img .hero-banner-caption .p-uni-regular {
+  font-size: 16px;
+  text-shadow: 1px 1px 1px black;
+}
+
+
+
+.cursos-home {
+  margin-top: 0;
+}
+.cursos-home {
+  background: url('/img/home/fondo-cursos-disponibles-2.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/*Seccion unete cursos*/
+.unete-cursos {
+  padding: 40px 0;
+}
+
+.bg-na {
+  background: #e9501d;
+}
+.bg-ne {
+  background: #1d1d1b;
+}
+.bg-ve-o {
+  background: #073b3a;
+}
+.bg-ce {
+  background: #009ee3;
+}
+.unete-cursos .unete-cursos-content {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 30px 0;
+  position: relative;
+}
+.unete-cursos .unete-cursos-left p {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  text-decoration: underline;
+  min-height: 40px;
+}
+.unete-cursos .unete-cursos-right {
+  margin-top: 30px;
+  text-align: center;
+}
+.unete-cursos .unete-cursos-right a{
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  margin: 0;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.p-uni-heavy-italic {
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+}
+.p-uni-regular {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+.btn-b-na{
+  background: #fff;
+  color: #e9501d;
+  display: inline-block;
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Seccion cursos home */
+
+.cursos-home {
+  background: url('/img/home/fondo-cursos-disponibles.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+}
+.cursos-home h2.t-uni-italic {
+  font-size: 46px;
+  padding: 30px 0;
+  text-align: center;
+}
+.cursos-home h2.t-uni-italic code {
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+.cursos-home .cursos-home-content {
+  height: auto;
+  margin-bottom: 30px;
+  padding: 30px;
+  text-align: center;
+}
+.bg-am {
+  background: #e2a30b;
+}
+.cursos-home .cursos-home-content .t-uni-heavy-italic {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.cursos-home .cursos-home-content p {
+  color: #fff;
+  font-size: 16px;
+}
+.cursos-home .cursos-home-content a {
+  color: #fff;
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+}
+/* Hero-menu */
+.hero-menu{
+  text-align: center;
+}
+.hero-menu ul{
+  padding: 0;
+}
+.hero-menu ul li{
+  list-style-type: none;
+}
+.hero-menu ul li a {
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: 24px;
+}
+.hero-menu ul li a:hover{
+  color: #009ee3;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+
+/*Footer*/
+
+footer {
+  background: #38353f;
 }
+
+footer .footer-logo {
+  background: #fff;
+  height: 50px;
+  text-align: center;
+}
+
+footer .footer-logo img{
+  background: white;
+  padding: 15px;
+ 
+}
+
+footer .footer-content {
+  padding: 80px 30px;
+}
+
+footer .footer-content h3 {
+font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+font-size: 24px;
+color: #009ee3;
+margin-top: 30px;
+margin-bottom: 30px; 
+}
+
+footer .footer-content h4 {
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+
+.bla {
+  color: #fff;
+}
+footer .footer-content span {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+}
+footer .footer-partners a.mailto {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+}
+footer .footer-content .footer-menu a {
+  font-size: 18px;
+}
+footer .footer-content .footer-menu ul {
+  padding: 0;
+}
+footer .footer-content .footer-menu ul li {
+  list-style-type: none;
+}
+
+footer .footer-content .footer-menu ul li a{
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: 14px;
+  
+}
+
+footer .footer-content .footer-menu ul li a:hover {
+  color: #009ee3;
+  text-decoration: none;
+}
+
+footer .footer-partners a:hover {
+  color: #009ee3;
+  text-decoration: none;
+}
+
+footer .dropdown-divider {
+  border: solid 1px #009ee3;
+  margin: 15px 0;
+}
+
+footer .footer-content .footer-redes {
+  margin-top: 20px;
+}
+footer .footer-content .footer-redes ul {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+
+footer .footer-content .footer-redes ul li {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 30px;
+  margin-right: 10px;
+}
+footer .footer-content .footer-menu ul li a {
+  font-family: Uni Neue Heavy Italic, Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: 14px;
+}
+footer .footer-content .footer-redes ul li a i {
+  color: #009ee3;
+  font-size: 30px;
+}
+footer .footer-content .footer-redes ul li a i:hover {
+  color: #fff;
+  font-size: 30px;
+ 
+}
+
+
+
+/* MediaQueries */
+
+@media only screen and (min-width: 768px){
+.hero-banner-img .hero-banner-caption h1.t-uni-heavy-italic {
+  font-size: 46px;
+}
+}
+@media only screen and (min-width: 768px){
+.hero-banner-img .hero-banner-caption .p-uni-regular {
+  font-size: 24px;
+}
+}
+
+@media only screen and (min-width: 992px){
+.encabezado .navbar .navbar-collapse .navbar-nav .nav-item a {
+  padding: 0;
+  color: #fff;
+}
+}
+
+@media only screen and (min-width: 992px){
+.encabezado .navbar .navbar-collapse .navbar-nav .nav-item a:hover {
+  color: #729e2e;
+}
+}
+@media only screen and (min-width: 992px){
+.encabezado .navbar .navbar-collapse .navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 20px;
+  background: #38353f;
+}
+}
+
+@media only screen and (min-width: 768px){
+.unete-cursos .unete-cursos-content .unete-cursos-left p {
+  text-align: left;
+}
+}
+@media only screen and (min-width: 768px){
+.unete-cursos .unete-cursos-content .unete-cursos-right {
+  margin-top: 10px;
+}
+}
+@media only screen and (min-width: 768px){
+.unete-cursos .unete-cursos-content:before {
+  content: url('/img/home/llave-left.png');
+  height: 122px;
+  left: -50px;
+  position: absolute;
+  top: 0;
+  width: 46px;
+}
+}
+@media only screen and (min-width: 768px){
+  .btn-b-na{
+      font-size: 21px;
+  }
+  
+}
+@media only screen and (min-width: 768px){
+.unete-cursos .unete-cursos-content:after {
+  content: url('/img/home/llave-right.png');
+  height: 122px;
+  position: absolute;
+  right: -50px;
+  top: 0;
+  width: 46px;
+}
+}
+@media only screen and (min-width: 768px){
+.cursos-home {
+  margin-top: 0;
+}
+}
+@media only screen and (min-width: 768px){
+.cursos-home .cursos-home-content {
+  height: 350px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+}
+
+
+
+
