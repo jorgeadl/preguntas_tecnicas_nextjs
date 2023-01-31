@@ -91,9 +91,12 @@ const Header = () => {
                       </li>
 
                       <li>
-                        <a className="dropdown-item" href="/DataAnalytics/">
-                          Data Analytics
-                        </a>
+                        <Link legacyBehavior href="/DataAnalytics/">
+                          <a className="dropdown-item" >
+                            Data Analytics
+                          </a>
+                        </Link>
+                        
                       </li>
                     </ul>
                   </li>
