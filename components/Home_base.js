@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-alert('foo');
+
 
 function Home() {
   return (
@@ -46,7 +46,7 @@ function Home() {
           <div className="row m-0">
             <div className="col-12 col-md-6 col-xl-4">
               <div className="cursos-home-content bg-am">
-                <h3 className="t-uni-heavy-italic">/*DESARROLLO</h3>
+                <h3 className="t-uni-heavy-italic">DESARROLLO</h3>
                 <h3 className="t-uni-heavy-italic">FULL STACK JAVASCRIPT*/</h3>
                 <p>
                   Genera las competencias necesarias para sumarte a un equipo de
@@ -62,7 +62,7 @@ function Home() {
 
             <div className="col-12 col-md-6 col-xl-4">
               <div className="cursos-home-content bg-ne">
-                <h3 className="t-uni-heavy-italic">/*DESARROLLO</h3>
+                <h3 className="t-uni-heavy-italic">DESARROLLO</h3>
                 <h3 className="t-uni-heavy-italic">FRONT END REACT*/</h3>
                 <p>
                   Genera las competencias para trabajar en la capa cliente de un
@@ -78,7 +78,7 @@ function Home() {
 
             <div className="col-12 col-md-6 col-xl-4">
               <div className="cursos-home-content bg-ve-o">
-                <h3 className="t-uni-heavy-italic">/*DATA</h3>
+                <h3 className="t-uni-heavy-italic">DATA</h3>
                 <h3 className="t-uni-heavy-italic">SCIENCE*/</h3>
                 <p>
                   Súmate al mundo de la ciencia de datos. Aprenderás
@@ -92,7 +92,7 @@ function Home() {
 
             <div className="col-12 col-md-6 col-xl-4">
               <div className="cursos-home-content bg-ce">
-                <h3 className="t-uni-heavy-italic">/*DISEÑO</h3>
+                <h3 className="t-uni-heavy-italic">DISEÑO</h3>
                 <h3 className="t-uni-heavy-italic">UX/UI*/</h3>
                 <p>
                   Aprende a crear experiencias de usuarios desde la
