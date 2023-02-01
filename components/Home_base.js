@@ -1,4 +1,6 @@
+/* eslint-disable */
 
+alert('foo');
 
 function Home() {
   return (
