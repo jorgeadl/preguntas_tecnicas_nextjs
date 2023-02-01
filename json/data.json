@@ -62,7 +62,7 @@
             {
                 "id": 11,
                 "Pregunta": "1. ¿Cuáles son los retos que has enfrentado como Desarrollador Front-End?",
-                "Respuesta": "Adaptación a los constantes cambios de los lenguajes de programación, frameworks o librerías. Optimización del sitio según los resultados mostrados por Lighthouse.Asegurarse de que cada botón, menú, panel o enlace funcione correctamente. Creación de un sitio funcional y atractivo para el cliente. Depuración del código que compone la interfaz. El candidato indicará los retos que enfrentó en los proyectos en los que participó. Por tal motivo, mencionará cuáles son los problemas más recurrentes cuando se desarrolla la interfaz de un sitio o app. Además, hablará de los conocimientos que obtuvo de cada situación que enfrentó."                
+                "Respuesta": "Adaptación a los constantes cambios de los lenguajes de programación, frameworks o librerías. Optimización del sitio según los resultados mostrados por Lighthouse. Asegurarse de que cada botón, menú, panel o enlace funcione correctamente. Creación de un sitio funcional y atractivo para el cliente. Depuración del código que compone la interfaz. El candidato indicará los retos que enfrentó en los proyectos en los que participó. Por tal motivo, mencionará cuáles son los problemas más recurrentes cuando se desarrolla la interfaz de un sitio o app. Además, hablará de los conocimientos que obtuvo de cada situación que enfrentó."                
             },
             {
                 "id": 12,
@@ -167,7 +167,7 @@
                 }   
         ]
     },{
-        "bootcamp": "UX-UI",
+        "bootcamp": "Diseño UX-UI",
         "questions": [
             {
                 "id": 31,
@@ -265,6 +265,7 @@
             },
             {
                 "id": 49,
+                "Type": "Array",
                 "Pregunta": "9. Enumere algunos problemas comunes a los que se enfrentan los analistas de datos.",
                 "Respuesta": ["1. Deficiencia en ortografía común.",
                             "2. Entradas dobles.", 

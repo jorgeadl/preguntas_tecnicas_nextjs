@@ -5,24 +5,24 @@ import path from 'path'
 
 export default function About(props) {
   const data = props.datajson;
-  
+  console.log(props)
   return (
     <div style={{ padding: 30 }}>
       <div>
-        <h3>{bootcamp}</h3>
+        
         {data.map(({bootcamp, questions}) =>
+        
           <div
             key={questions.id}
             style={{ padding: 20, borderBottom: '1px solid #ccc' }}>
             <h5>
-  
            {bootcamp}
             </h5>
             <h5>
             {questions.map(({Pregunta, Respuesta, Type}) =>{
               return(<div key={questions.id}>
-                <h5>{Pregunta}</h5>
-                <div>{ Type == 'Array' ?  Respuesta.map(element => <p key={questions.id}>{element}</p>)  : Respuesta }</div>
+                <h5 className='text-primary py-3'>{Pregunta}</h5>
+                <div className='fs-6'>{ Type == 'Array' ?  Respuesta.map(element => <div key={questions.id}>{element}</div>)  : Respuesta }</div>
                
                 </div>)
               
